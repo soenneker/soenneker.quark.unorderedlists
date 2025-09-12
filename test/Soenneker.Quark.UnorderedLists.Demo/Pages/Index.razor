@@ -1,0 +1,356 @@
+﻿@page "/"
+@using Microsoft.Extensions.Logging
+
+@inject ILogger<Index> Logger
+
+<div class="container">
+    <img src="https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png" />
+    <h1>Soenneker.Quark.UnorderedLists Demo</h1>
+    <p>This page demonstrates the HTML Unordered List component from Quark.UnorderedLists.</p>
+    <br />
+
+    <hr />
+
+    <h2>Basic Unordered List Usage</h2>
+    <p>The UnorderedList component provides semantic HTML unordered list elements for bulleted content display.</p>
+    
+    <div class="mb-3">
+        <UnorderedList>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Bootstrap Typography Classes</h2>
+    <div class="mb-3">
+        <UnorderedList Class="h1">
+            <li>Heading 1 Style List</li>
+            <li>Another item</li>
+        </UnorderedList>
+        <UnorderedList Class="h2">
+            <li>Heading 2 Style List</li>
+            <li>Another item</li>
+        </UnorderedList>
+        <UnorderedList Class="h3">
+            <li>Heading 3 Style List</li>
+            <li>Another item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Color Classes</h2>
+    <div class="mb-3">
+        <UnorderedList Class="text-primary">
+            <li>Primary colored list item</li>
+            <li>Another primary item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-secondary">
+            <li>Secondary colored list item</li>
+            <li>Another secondary item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-success">
+            <li>Success colored list item</li>
+            <li>Another success item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-danger">
+            <li>Danger colored list item</li>
+            <li>Another danger item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-warning">
+            <li>Warning colored list item</li>
+            <li>Another warning item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-info">
+            <li>Info colored list item</li>
+            <li>Another info item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Font Weight Classes</h2>
+    <div class="mb-3">
+        <UnorderedList Class="fw-light">
+            <li>Light font weight list item</li>
+            <li>Another light item</li>
+        </UnorderedList>
+        <UnorderedList Class="fw-normal">
+            <li>Normal font weight list item</li>
+            <li>Another normal item</li>
+        </UnorderedList>
+        <UnorderedList Class="fw-bold">
+            <li>Bold font weight list item</li>
+            <li>Another bold item</li>
+        </UnorderedList>
+        <UnorderedList Class="fw-bolder">
+            <li>Bolder font weight list item</li>
+            <li>Another bolder item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Font Style Classes</h2>
+    <div class="mb-3">
+        <UnorderedList Class="fst-normal">
+            <li>Normal font style list item</li>
+            <li>Another normal item</li>
+        </UnorderedList>
+        <UnorderedList Class="fst-italic">
+            <li>Italic font style list item</li>
+            <li>Another italic item</li>
+        </UnorderedList>
+        <UnorderedList Class="fst-oblique">
+            <li>Oblique font style list item</li>
+            <li>Another oblique item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Text Decoration</h2>
+    <div class="mb-3">
+        <UnorderedList Class="text-decoration-none">
+            <li>No text decoration list item</li>
+            <li>Another item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-decoration-underline">
+            <li>Underlined list item</li>
+            <li>Another underlined item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-decoration-line-through">
+            <li>Strikethrough list item</li>
+            <li>Another strikethrough item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Text Alignment</h2>
+    <div class="mb-3">
+        <UnorderedList Class="text-start">
+            <li>Left aligned list item</li>
+            <li>Another left aligned item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-center">
+            <li>Center aligned list item</li>
+            <li>Another center aligned item</li>
+        </UnorderedList>
+        <UnorderedList Class="text-end">
+            <li>Right aligned list item</li>
+            <li>Another right aligned item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Background Colors</h2>
+    <div class="mb-3">
+        <UnorderedList Class="bg-primary text-white p-3">
+            <li>Primary background list item</li>
+            <li>Another primary item</li>
+        </UnorderedList>
+        <UnorderedList Class="bg-secondary text-white p-3">
+            <li>Secondary background list item</li>
+            <li>Another secondary item</li>
+        </UnorderedList>
+        <UnorderedList Class="bg-success text-white p-3">
+            <li>Success background list item</li>
+            <li>Another success item</li>
+        </UnorderedList>
+        <UnorderedList Class="bg-danger text-white p-3">
+            <li>Danger background list item</li>
+            <li>Another danger item</li>
+        </UnorderedList>
+        <UnorderedList Class="bg-warning text-dark p-3">
+            <li>Warning background list item</li>
+            <li>Another warning item</li>
+        </UnorderedList>
+        <UnorderedList Class="bg-info text-white p-3">
+            <li>Info background list item</li>
+            <li>Another info item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Spacing</h2>
+    <div class="mb-3">
+        <UnorderedList Class="m-1 p-1 bg-light">
+            <li>Margin and padding 1 list item</li>
+            <li>Another item</li>
+        </UnorderedList>
+        <UnorderedList Class="m-2 p-2 bg-light">
+            <li>Margin and padding 2 list item</li>
+            <li>Another item</li>
+        </UnorderedList>
+        <UnorderedList Class="m-3 p-3 bg-light">
+            <li>Margin and padding 3 list item</li>
+            <li>Another item</li>
+        </UnorderedList>
+        <UnorderedList Class="m-4 p-4 bg-light">
+            <li>Margin and padding 4 list item</li>
+            <li>Another item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Bootstrap Display Classes</h2>
+    <div class="mb-3">
+        <UnorderedList Class="d-inline bg-primary text-white p-2">
+            <li>Inline list item</li>
+        </UnorderedList>
+        <UnorderedList Class="d-inline bg-secondary text-white p-2">
+            <li>Another inline list item</li>
+        </UnorderedList>
+        <UnorderedList Class="d-block bg-success text-white p-2">
+            <li>Block list item</li>
+            <li>Another block item</li>
+        </UnorderedList>
+        <UnorderedList Class="d-inline-block bg-warning text-dark p-2">
+            <li>Inline-block list item</li>
+            <li>Another inline-block item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Responsive Classes</h2>
+    <div class="mb-3">
+        <UnorderedList Class="text-sm-start text-md-center text-lg-end">
+            <li>Responsive text alignment list item</li>
+            <li>Changes based on screen size</li>
+        </UnorderedList>
+        <UnorderedList Class="d-none d-md-block">
+            <li>This list is hidden on small screens</li>
+            <li>Visible on medium+ screens</li>
+        </UnorderedList>
+        <UnorderedList Class="d-block d-md-none">
+            <li>This list is visible on small screens</li>
+            <li>Hidden on medium+ screens</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Custom Bullet Styles</h2>
+    <div class="mb-3">
+        <UnorderedList Class="list-group">
+            <li class="list-group-item">List group item</li>
+            <li class="list-group-item">Another list group item</li>
+            <li class="list-group-item">Third list group item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List Properties</h2>
+    <div class="bg-light p-3 mb-3">
+        <h3>UnorderedList Features</h3>
+        <p>The UnorderedList component inherits all properties from the Element base class:</p>
+        <ul>
+            <li><strong>Id:</strong> HTML id attribute</li>
+            <li><strong>Class:</strong> CSS classes (Bootstrap utility classes supported)</li>
+            <li><strong>Style:</strong> Inline CSS styles</li>
+            <li><strong>Title:</strong> Tooltip text</li>
+            <li><strong>Hidden:</strong> Visibility control</li>
+            <li><strong>Display:</strong> CSS display property</li>
+            <li><strong>Margin/Padding:</strong> Spacing utilities</li>
+            <li><strong>Event Handlers:</strong> Click, focus, keyboard events</li>
+        </ul>
+    </div>
+
+    <h2>Interactive Unordered List Example</h2>
+    <div class="mb-3">
+        <UnorderedList Class="text-primary" style="cursor: pointer;" title="Clickable list">
+            <li>This list has a pointer cursor and tooltip</li>
+            <li>Another interactive item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Custom Styling</h2>
+    <div class="mb-3">
+        <UnorderedList Class="custom-list" style="font-family: 'Courier New', monospace; font-size: 1.1em; color: #6f42c1; line-height: 1.6;">
+            <li>Custom styled list item with inline styles</li>
+            <li>Another custom styled item</li>
+            <li>Third custom styled item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Nested Unordered Lists</h2>
+    <div class="mb-3">
+        <UnorderedList>
+            <li>First level item</li>
+            <li>Second level item
+                <UnorderedList>
+                    <li>Nested item 1</li>
+                    <li>Nested item 2</li>
+                    <li>Nested item 3</li>
+                </UnorderedList>
+            </li>
+            <li>Third level item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Different List Styles</h2>
+    <div class="mb-3">
+        <UnorderedList Class="list-unstyled">
+            <li>Unstyled list item</li>
+            <li>Another unstyled item</li>
+        </UnorderedList>
+        <UnorderedList Class="list-inline">
+            <li class="list-inline-item">Inline list item 1</li>
+            <li class="list-inline-item">Inline list item 2</li>
+            <li class="list-inline-item">Inline list item 3</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Complex Unordered List Example</h2>
+    <div class="mb-3">
+        <UnorderedList Class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">First item with subheading</div>
+                    Content for the first item goes here.
+                </div>
+                <span class="badge bg-primary rounded-pill">•</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Second item with subheading</div>
+                    Content for the second item goes here.
+                </div>
+                <span class="badge bg-primary rounded-pill">•</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Third item with subheading</div>
+                    Content for the third item goes here.
+                </div>
+                <span class="badge bg-primary rounded-pill">•</span>
+            </li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Custom Bullet Points</h2>
+    <div class="mb-3">
+        <UnorderedList style="list-style-type: square;">
+            <li>Square bullet point item</li>
+            <li>Another square bullet item</li>
+        </UnorderedList>
+        <UnorderedList style="list-style-type: circle;">
+            <li>Circle bullet point item</li>
+            <li>Another circle bullet item</li>
+        </UnorderedList>
+        <UnorderedList style="list-style-type: disc;">
+            <li>Disc bullet point item</li>
+            <li>Another disc bullet item</li>
+        </UnorderedList>
+    </div>
+
+    <h2>Unordered List with Icons as Bullets</h2>
+    <div class="mb-3">
+        <UnorderedList style="list-style-type: none; padding-left: 0;">
+            <li style="padding-left: 1.5em; position: relative;">
+                <span style="position: absolute; left: 0;">✓</span>
+                Checkmark bullet item
+            </li>
+            <li style="padding-left: 1.5em; position: relative;">
+                <span style="position: absolute; left: 0;">→</span>
+                Arrow bullet item
+            </li>
+            <li style="padding-left: 1.5em; position: relative;">
+                <span style="position: absolute; left: 0;">★</span>
+                Star bullet item
+            </li>
+        </UnorderedList>
+    </div>
+</div>
+
+@code{
+    protected override void OnInitialized()
+    {
+        Logger.LogInformation("UnorderedList demo page initialized");
+    }
+}
